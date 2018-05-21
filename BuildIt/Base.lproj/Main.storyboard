@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dBz-uB-hNn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QW5-37-JLQ">
+            <objects>
+                <navigationController id="dBz-uB-hNn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tcn-JY-Dre">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f21-d0-ZBb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTW-tQ-ayt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727" y="118"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuildIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nkW-1s-3x0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="S0X-nR-x9r">
+                                <rect key="frame" x="178" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nkW-1s-3x0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3Pn-Gx-7EY"/>
+                            <constraint firstItem="S0X-nR-x9r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7mi-NS-jxS"/>
+                            <constraint firstItem="S0X-nR-x9r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pZG-k2-o27"/>
+                            <constraint firstItem="nkW-1s-3x0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r3X-je-V37"/>
+                            <constraint firstItem="nkW-1s-3x0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vlb-rb-gHs"/>
+                            <constraint firstItem="nkW-1s-3x0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wB9-Iz-HNy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kSl-RP-4ho">
+                        <barButtonItem key="leftBarButtonItem" title="°C" id="0Wg-kD-7an">
+                            <connections>
+                                <action selector="didTapCFButton:" destination="BYZ-38-t0r" id="mzm-29-xVq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CFButton" destination="0Wg-kD-7an" id="2Cl-dT-D7y"/>
+                        <outlet property="activityIndicatorView" destination="S0X-nR-x9r" id="SYB-fV-aC2"/>
+                        <outlet property="tableView" destination="nkW-1s-3x0" id="BWF-yi-6zB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
