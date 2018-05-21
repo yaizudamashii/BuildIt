@@ -1,0 +1,6 @@
+framework module Pods_BuildIt {
+  umbrella header "Pods-BuildIt-umbrella.h"
+
+  export *
+  module * { export * }
+}
